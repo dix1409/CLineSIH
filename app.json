@@ -7,12 +7,16 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/image21.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#2a2e31"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
+    },
+    "androidStatusBar":{
+      "barStyle":"light-content",
+      "backgroundColor":"#2a2e31"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -24,7 +28,9 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "googleServicesFile": "./google-services.json",
+      "package":"com.sih.trolly"
     },
     "web": {
       "favicon": "./assets/favicon.png"
