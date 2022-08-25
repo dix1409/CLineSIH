@@ -16,6 +16,14 @@ const REPLACE_SCREEN_NAME = (props) => {
   const [expiryyear, setExpiryyear] = React.useState(undefined);
   const [cvc, setCvc] = React.useState(undefined);
   const { theme } = props;
+  const Data=route.params.Data;
+
+  const addData=()=>{
+      const Id=uid(15);
+      setDoc(doc(store,"Payment",Id),{Data:Data}).then(()=>{
+          navigation.navigate("Qr",{Id:Id});
+      })
+    }
   return (
     <ScreenContainer hasSafeArea={true} scrollable={true}>
       <KeyboardAvoidingView
@@ -299,9 +307,9 @@ const REPLACE_SCREEN_NAME = (props) => {
               { borderRadius: theme.borderRadius.global },
             ])}
             type="solid"
-            onPress={()=>props.navigation.navigate("Thx")}
+            onPress={addData}
           >
-            Add to Cart
+            Proceed
           </Button>
         </View>
       </KeyboardAvoidingView>

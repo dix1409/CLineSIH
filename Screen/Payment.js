@@ -2,7 +2,8 @@ import React from 'react';
 import { ImageBackground, StyleSheet, View, Image, Text, TouchableOpacity,Dimensions, FlatList } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 const {width, height}=Dimensions.get("window")
-export default function Payment({navigation}) {
+export default function Payment({navigation,route}) {
+    const Data=route.params.Data;
 const image=[
     {source:require("../assets/image4.png"),
     data:"Cash",
@@ -32,7 +33,7 @@ const upiImage=[
 ]
 const renderItem=({item,index})=>{
     return(
-        <TouchableOpacity style={{width:width*0.25,height:221,backgroundColor:"rgba(0, 0, 0, 0.2)",marginLeft:15,alignItems:"center",justifyContent:"center",borderRadius:10}} key={index} onPress={()=>navigation.navigate(item.Screen)} >
+        <TouchableOpacity style={{width:width*0.25,height:221,backgroundColor:"rgba(0, 0, 0, 0.2)",marginLeft:15,alignItems:"center",justifyContent:"center",borderRadius:10}} key={index} onPress={()=>navigation.navigate(item.Screen,{Data:Data})} >
         <Image source={item.source} style={{width:74,height:72}} />
         <Text style={{marginTop:10}}>{item.data}</Text>
       </TouchableOpacity>
@@ -57,7 +58,7 @@ return (
         contentContainerStyle={{alignItems: 'center'}}
     />
       <TouchableOpacity style={{height:221,backgroundColor:"rgba(0, 0, 0, 0.2)",width:"95%",marginTop:"20%",borderRadius:20,alignItems:"center",justifyContent:"center"}}
-      onPress={()=>navigation.navigate("Upi")}
+      onPress={()=>navigation.navigate("Upi",{Data:Data})}
       >
         <Image
         source={require('../assets/image7.png')}

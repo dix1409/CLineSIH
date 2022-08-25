@@ -1,3 +1,4 @@
+import { addDoc, collection } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
 import { ImageBackground, StyleSheet, View, Image, Text, TouchableOpacity, FlatList ,Dimensions, Button} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -8,7 +9,8 @@ export default function Bill({navigation,route}) {
 const Data=route.params.product
 const Quantity=route.params.Quantity
 const Price=route.params.Price
-console.log(Data);
+// console.log(Data);
+
 function renderItem({ item, index }) {
    //  count(item)
    return (
@@ -46,7 +48,7 @@ return (
               renderItem={renderItem}
             />
             
-            <Button title={"You are all hang up !!"} onPress={()=>navigation.navigate("Payment")}  />
+            <Button title={"You are all hang up !!"} onPress={()=>navigation.navigate("Payment",{Data:Data})}  />
       </View>
 </SafeAreaView>
   );

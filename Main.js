@@ -10,6 +10,7 @@ import Tos from './Screen/Tos';
 import Card from './Screen/Card';
 import Thx from './Screen/Thx';
 import Upi from './Screen/Upi';
+import Qr from './Screen/Qr';
 
 export default function Main(props) {
     const Stack=createNativeStackNavigator()
@@ -25,6 +26,8 @@ return (
             <Stack.Screen name="Tos" component={Tos} options={{headerShown:false}}  />
             <Stack.Screen name="Card" component={Card} options={{headerShown:false}}  />
             <Stack.Screen name="Thx" component={Thx} options={{headerShown:false}}  />
+            <Stack.Screen name="Qr" component={Qr} options={{headerShown:false}}  />
+
             <Stack.Screen name="Upi" component={Upi} options={{headerShown:false}} />
 
 

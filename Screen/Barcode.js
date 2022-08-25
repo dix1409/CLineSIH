@@ -78,52 +78,7 @@ alert("Yes my code...")
               setQuantity(Quantity+1)
 
             }
-        //     alert(Data.length)
-        //     if(Data.length > 0){
-        //       if(flag==0)
-        //   //  var promise= Data.map((item, index) => {
-            
-
-        //   //     if (item.id === docs.id) {
-         
-        //   //       setDuplicate(true);
-        //   //       console.log("index : "+ index);
-           
-        //   //       let record = {
-        //   //         Category: item.Category,
-        //   //         Name: item.Name,
-        //   //         Price: item.Price,
-        //   //         Size: item.Size,
-        //   //         id: item.id,
-        //   //         quantity: item.quantity + 1,
-        //   //       };
-        //   //       console.log(record);
-          
-
-        //   //       setData([...Data.filter(item=>item.id!==record.id),record]);
-      
-        //   //       flag=1
-        //   //     }
-        //   //   })
-        //     if(flag==1) {
-        //       setData([...Data, { ...docs.data(), id: docs.id, quantity: 1 }]);
-
-        //     }
-          
-            
-        //   }else{
-        //     if (Data.length === 0 ) {
-        //       // alert("No My Guess Wrong!!")
-        //       setData([...Data, { ...docs.data(), id: docs.id, quantity: 1 }]);
-        //     }
-           
-          
-        // }
-
-
-      
-        
-          } else {
+        } else {
           
             setLoad(false);
 
